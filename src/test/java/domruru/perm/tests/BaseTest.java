@@ -25,7 +25,7 @@ public class BaseTest {
         return driver;
     }
 
-    protected void tearDown() throws Exception {
+    protected void tearDown() throws Exception { 
         if(driver != null) {
             driver.quit();
         }
