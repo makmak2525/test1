@@ -21,11 +21,11 @@ public class BaseTest {
     }
 
     protected WebDriver switchWindow(){
-        payPage = new PayPage((WebDriver) driver.switchTo().alert());
+        payPage = new PayPage((WebDriver) driver.switchTo().frame("js-iframe"));
         return driver;
     }
 
-    protected void tearDown() throws Exception { 
+    protected void tearDown() throws Exception {
         if(driver != null) {
             driver.quit();
         }

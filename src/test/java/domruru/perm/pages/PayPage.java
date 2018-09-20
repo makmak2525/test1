@@ -28,9 +28,6 @@ public class PayPage {
     @FindBy(id = "buttonPayment")
     public WebElement PaymentButton;
 
-//    @FindBy(id = "description")
-//    private WebElement descriptionText;
-
     public void inputPhone(String phone){
         loginPhone.sendKeys(phone);
     }
@@ -46,12 +43,5 @@ public class PayPage {
     public void clickSubmitButton(){
         SubmitButton.click();
     }
-//
-//    public static formPayment(){
-//
-//    }
-//    public String getDesriptionText(){
-//        String DescText = descriptionText.getText();
-//        return DescText;
-//    }
+
 }

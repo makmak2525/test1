@@ -25,12 +25,8 @@ public class PayTest extends BaseTest {
         payPage.inputAmount("500");
         payPage.inputEmail("angelikan.2012@yandex.ru");
         payPage.clickSubmitButton();
-
-//        Assert.assertTrue(payPage.PaymentButton.isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector(".submit-btn payments-frame__button")).isDisplayed());
-//        String descText = payPage.getDesriptionText();
-//        String expectedText = "Оплата услуг связи";
-//        Assert.assertEquals(expectedText, descText);
+        switchWindow();
+        Assert.assertTrue(driver.findElement(By.cssSelector(".payments-frame__button")).isDisplayed());
     }
 
     @AfterMethod
